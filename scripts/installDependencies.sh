@@ -19,6 +19,6 @@ apt-get install build-essential cmake cmake-curses-gui -y
 apt-get install libgtk-3-dev libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev -y
 
 # QtCreator for development; not required for librealsense core library
-apt-get install qtcreator -y
+#apt-get install qtcreator -y
 
 
