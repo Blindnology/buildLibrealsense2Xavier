@@ -54,6 +54,11 @@ Note that you will need to recompile the library and application for these to ta
 
 Release Notes:
 
+June, 2020
+
+* librealsense's incomplete-frame & model-views patching enabled
+* qtcreator removed from dependencies
+
 November, 2019
 
 * Fixed for JetPack 4.2, L4T 32.1
