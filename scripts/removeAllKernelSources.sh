@@ -3,5 +3,5 @@
 cd /usr/src
 rm -r kernel
 rm -r hardware
-rm l4t-sources-32-1-JAX-TX2
+rm public_sources.tbz2
 

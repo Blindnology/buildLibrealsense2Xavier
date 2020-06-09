@@ -32,8 +32,6 @@ echo -e "\e[32mApplying Realsense-camera-formats patch\e[0m"
 patch -p1 < ${INSTALL_DIR}/patches/realsense-camera-formats_ubuntu-bionic-Xavier-4.9.140.patch
 echo -e "\e[32mApplying realsense-metadata patch\e[0m"
 patch -p1 < ${INSTALL_DIR}/patches/realsense-metadata-ubuntu-bionic-Xavier-4.9.140.patch
-echo -e "\e[32mApplying media-uvc patch\e[0m"
-patch -p1 < ${INSTALL_DIR}/patches/0001-media-uvc-restrict-urb_num-no-less-than-UVC_URBS.patch
 echo -e "\e[32mApplying realsense-hid patch\e[0m"
 # This appears to be the closest
 patch -p1 < ${INSTALL_DIR}/patches/realsense-hid-ubuntu-bionic-Xavier-4.9.140.patch
