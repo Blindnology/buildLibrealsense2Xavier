@@ -3,8 +3,8 @@ apt-add-repository universe
 apt-get update
 apt-get install pkg-config -y
 cd /usr/src
-wget -N https://developer.nvidia.com/embedded/dlc/r32-3-1_Release_v1.0/Sources/T186/public_sources.tbz2
-# l4t-sources-32-1-0 is a tbz2 file
+wget -N https://developer.nvidia.com/embedded/L4T/r32_Release_v4.3/Sources/T186/public_sources.tbz2
+# l4t-sources-32-4-3 is a tbz2 file
 tar -xvf public_sources.tbz2 Linux_for_Tegra/source/public/kernel_src.tbz2
 tar -xvf Linux_for_Tegra/source/public/kernel_src.tbz2
 # Space is tight; get rid of the compressed kernel source

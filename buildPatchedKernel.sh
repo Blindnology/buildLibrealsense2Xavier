@@ -51,10 +51,10 @@ set -e
 KERNEL_BUILD_VERSION=master
 # Quotes around Jetson Board because the name may have a space, ie "AGX Xavier"
 if [ "$JETSON_BOARD" == "AGX Xavier" ] ; then 
-  L4TTarget="32.3.1"
-  # Test for 32.1.0 first
-  if [ $JETSON_L4T = "32.3.1" ] ; then
-     KERNEL_BUILD_VERSION=vL4T32.1.0
+  L4TTarget="32.4.3"
+  # Test for 32.4.3 first
+  if [ $JETSON_L4T = "32.4.3" ] ; then
+     KERNEL_BUILD_VERSION=vL4T32.4.3
   else
    echo ""
    tput setaf 1

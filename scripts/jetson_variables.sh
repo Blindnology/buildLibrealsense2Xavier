@@ -54,11 +54,12 @@ export JETSON_BOARD
 # reference https://devtalk.nvidia.com/default/topic/860092/jetson-tk1/how-do-i-know-what-version-of-l4t-my-jetson-tk1-is-running-/
 if [ -f /etc/nv_tegra_release ]; then
     # L4T string
-    JETSON_L4T_STRING=$(head -n 1 /etc/nv_tegra_release)
+    JETSON_L4T_STRING=$(dpkg-query --showformat='${Version}' --show nvidia-l4t-core)
 
     # Load release and revision
-    JETSON_L4T_RELEASE=$(echo $JETSON_L4T_STRING | cut -f 1 -d ',' | sed 's/\# R//g' | cut -d ' ' -f1)
-    JETSON_L4T_REVISION=$(echo $JETSON_L4T_STRING | cut -f 2 -d ',' | sed 's/\ REVISION: //g' )
+    JETSON_L4T_ARRAY=$(echo $JETSON_L4T_STRING | cut -f 1 -d '-')
+    JETSON_L4T_RELEASE=$(echo $JETSON_L4T_ARRAY | cut -f 1 -d '.')
+    JETSON_L4T_REVISION=${JETSON_L4T_ARRAY#"$JETSON_L4T_RELEASE."}
     # unset variable
     unset JETSON_L4T_STRING
     
@@ -79,6 +80,8 @@ if [ -f /etc/nv_tegra_release ]; then
                     JETSON_JETPACK="4.2" ;;
             "32.3.1")
                     JETSON_JETPACK="4.3" ;;
+            "32.4.3")
+                    JETSON_JETPACK="4.4" ;;
             *)
                JETSON_JETPACK="UNKNOWN" ;;
         esac        
